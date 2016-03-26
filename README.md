@@ -1,4 +1,4 @@
-#### Basic Structure Application
+#### BasicStructure
 
 ### March 26, 2016
 
