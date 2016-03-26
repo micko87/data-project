@@ -3,7 +3,7 @@
   <groupId>com.sqa.nc</groupId>
   <artifactId>BasicStructure</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>Farewell Message Project</name>
+  <name>Basic Structure</name>
   <description>An application which greets and says farewell to user.</description>
    <dependencies>
   <dependency>
