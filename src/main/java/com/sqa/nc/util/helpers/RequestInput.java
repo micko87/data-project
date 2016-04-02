@@ -39,6 +39,7 @@ public class RequestInput {
 			// Ask the user a question to get relative input
 			System.out.print(question + " (Yes/Y) or (No/N):");
 			// Set the input based on what the user enters on their keyboard
+			Scanner scanner = new Scanner(System.in);
 			input = scanner.nextLine();
 			// Check if the user has entered Yes
 			if (input.equalsIgnoreCase("Yes") || input.equalsIgnoreCase("Y")) {
@@ -74,6 +75,7 @@ public class RequestInput {
 				// Ask the user a question to get relative input
 				System.out.print(question);
 				// Set the input based on what the user enters on their keyboard
+				Scanner scanner = new Scanner(System.in);
 				input = scanner.nextLine();
 				// Check that the input String is one character long
 				if (input.length() < 1) {
@@ -105,7 +107,7 @@ public class RequestInput {
 			// Declare Local Variables
 			boolean present = false;
 			// Get the character using alternative method to get a char
-			char letter = RequestInputNC.getChar(question);
+			char letter = RequestInput.getChar(question);
 			// Iterate through the supplied chars and see if it is present
 			for (int i = 0; i < characters.length; i++) {
 				if (Character.compare(characters[i], letter) == 0) {
@@ -141,6 +143,7 @@ public class RequestInput {
 				System.out.print(question);
 				// Set the number based on what the user enters on their
 				// keyboard
+				Scanner scanner = new Scanner(System.in);
 				num = Double.parseDouble(scanner.nextLine());
 				// Break out of the infinite loop
 				break;
@@ -171,6 +174,7 @@ public class RequestInput {
 				System.out.print(question);
 				// Set the number based on what the user enters on their
 				// keyboard
+				Scanner scanner = new Scanner(System.in);
 				num = Integer.parseInt(scanner.nextLine());
 				// Break out of the infinite loop
 				break;
@@ -198,6 +202,7 @@ public class RequestInput {
 		while (true) {
 			try {
 				System.out.print(question);
+				Scanner scanner = new Scanner(System.in);
 				input = scanner.nextLine();
 				resultValue = Integer.parseInt(input);
 				for (int i = 0; i < acceptableNumber.length; i++) {
@@ -250,6 +255,7 @@ public class RequestInput {
 		while (true) {
 			try {
 				System.out.print(question);
+				Scanner scanner = new Scanner(System.in);
 				input = scanner.nextLine();
 				resultValue = input;
 				for (int i = 0; i < acceptableWords.length; i++) {
