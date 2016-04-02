@@ -66,33 +66,33 @@ public class RequestInputTests {
 	@Ignore
 	public void testGetChar () {
 		question = "Please give me the best character: ";
-		userValue = RequestInput.getChar(question, 'a', 'n', 'c', 'z');
+		userValue = RequestInputNC.getChar(question, 'a', 'n', 'c', 'z');
 	}
 
 	@Test
 	@Ignore
 	public void testGetDouble () {
 		question = "Please give me your lucky DOUBLE: ";
-		userValue = RequestInput.getDouble(question);
+		userValue = RequestInputNC.getDouble(question);
 	}
 
 	@Test
 	@Ignore
 	public void testGetInt () {
 		question = "Please give me your lucky number: ";
-		userValue = RequestInput.getInt(question, 1, 2, 3, 4, 5, 6, 7, 8);
+		userValue = RequestInputNC.getInt(question, 1, 2, 3, 4, 5, 6, 7, 8);
 	}
 
 	@Test
 	@Ignore
 	public void testGetIntWithRange () {
 		question = "Please give me a number within my range: ";
-		userValue = RequestInput.getIntWithRange(question, 0, 10);
+		userValue = RequestInputNC.getIntWithRange(question, 0, 10);
 	}
 
 	@Test
 	public void testGetString () {
 		question = "Please give me your favorite color: ";
-		userValue = RequestInput.getString(question, "red", "white", "blue");
+		userValue = RequestInputNC.getString(question, "red", "white", "blue");
 	}
 }
