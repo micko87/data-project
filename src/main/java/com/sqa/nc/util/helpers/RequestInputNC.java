@@ -28,7 +28,6 @@ public class RequestInputNC {
 
 	// Get a char value from the user
 	public static char getChar (String question) {
-		System.out.println("ANYTING GOES");
 		String input;
 		char resultValue;
 		scanner = new Scanner(System.in);
@@ -113,7 +112,6 @@ public class RequestInputNC {
 
 	// Get a int from the user, must be in acceptable range value
 	public static int getIntWithRange (String question, int Min, int Max) {
-		System.out.println("nothing");
 		boolean validIntWithRange = false;
 		int resultValue;
 		String input = null;

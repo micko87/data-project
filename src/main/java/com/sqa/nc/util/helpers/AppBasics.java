@@ -41,8 +41,6 @@ public class AppBasics {
 		System.out.println("Welcome to the " + appName + " Application.");
 		username = RequestInput.getString("Could I get your name please?");
 		System.out.println(username);
-		int num = RequestInput.getInt("INT PLZ");
-		System.out.println(num);
 		return username;
 	}
 }

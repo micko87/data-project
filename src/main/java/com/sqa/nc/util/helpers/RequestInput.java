@@ -224,6 +224,73 @@ public class RequestInput {
 	}
 
 	/**
+	 * @param question
+	 * @param unacceptableErrorMessage
+	 * @param min
+	 * @param max
+	 * @return
+	 */
+	public static int getInt (String question, String unacceptableErrorMessage, int min, int max) {
+		boolean validIntWithRange = false;
+		int resultValue;
+		String input = null;
+		scanner = new Scanner(System.in);
+		while (true) {
+			try {
+				System.out.print(question);
+				input = scanner.nextLine();
+				resultValue = Integer.parseInt(input);
+				if (resultValue >= min && resultValue <= max) {
+					validIntWithRange = true;
+				}
+				if (!validIntWithRange) {
+					throw new InvalidAcceptableIntException();
+				}
+				return resultValue;
+			} catch (NumberFormatException e) {
+				System.out.println("You have not provided a valid number type (" + input + ")");
+				continue;
+			} catch (InvalidAcceptableIntException e) {
+				String message = String.format(unacceptableErrorMessage, min, max);
+				System.out.println(message);
+			}
+		}
+	}
+
+	/**
+	 * Static Helper Method which asks user specified question and as long as
+	 * they give a input within min/max will return a int type variable.
+	 *
+	 * @return int value based on user input
+	 */
+	// Get a int from the user, must be in acceptable range value
+	public static int getIntWithRange (String question, int Min, int Max) {
+		boolean validIntWithRange = false;
+		int resultValue;
+		String input = null;
+		scanner = new Scanner(System.in);
+		while (true) {
+			try {
+				System.out.print(question);
+				input = scanner.nextLine();
+				resultValue = Integer.parseInt(input);
+				if (resultValue > Min && resultValue < Max) {
+					validIntWithRange = true;
+				}
+				if (!validIntWithRange) {
+					throw new InvalidAcceptableIntException();
+				}
+				return resultValue;
+			} catch (NumberFormatException e) {
+				System.out.println("You have not provided a valid number type (" + input + ")");
+				continue;
+			} catch (InvalidAcceptableIntException e) {
+				System.out.println("You have not provided an acceptable int within range(" + input + ")");
+			}
+		}
+	}
+
+	/**
 	 * Static Helper Method which asks user specified question and return the
 	 * input to user.
 	 *
@@ -273,4 +340,47 @@ public class RequestInput {
 		}
 	}
 	// Create your own helper method that you may find useful
+
+	/**
+	 * @param question
+	 * @param cancelMessage
+	 * @param bird
+	 * @param cat
+	 * @param dog
+	 * @param fish
+	 * @param horse
+	 * @param reptile
+	 * @return
+	 */
+	public static boolean getString (String question, String cancelMessage, Enum... acceptableEnum) {
+		boolean validWord = false;
+		String resultValue;
+		// boolean willCancel = false;
+		String input = null;
+		scanner = new Scanner(System.in);
+		while (true) {
+			try {
+				System.out.print(question);
+				input = scanner.nextLine();
+				for (int i = 0; i < acceptableEnum.length; i++) {
+					if (input.trim().equalsIgnoreCase(acceptableEnum[i].toString())) {
+						validWord = true;
+					}
+				}
+				if (!validWord) {
+					throw new InvalidAcceptableWordException();
+				}
+				return true;
+			} catch (InvalidAcceptableWordException e) {
+				System.out.println("You have not provided an acceptable word (" + input + ")");
+				System.out.println("\tPlease choose from: " + Arrays.toString(acceptableEnum));
+				String message = String.format(cancelMessage, input);
+				// System.out.print(message);
+				System.out.print(message + "\nTo cancel, enter '*' or anything else to continue: ");
+				input = scanner.nextLine();
+				if (input.equals("*"))
+					return false;
+			}
+		}
+	}
 }
