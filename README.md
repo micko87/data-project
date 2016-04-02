@@ -1,6 +1,6 @@
 #### BasicStructure
 
-### March 26, 2016
+### Date
 
 Basic structure for future projects
 
