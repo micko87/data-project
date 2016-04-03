@@ -39,8 +39,7 @@ public class AppBasics {
 	public static String welcomeUserAndGetUsername (String appName) {
 		String username;
 		System.out.println("Welcome to the " + appName + " Application.");
-		username = RequestInput.getString("Could I get your name please?");
-		System.out.println(username);
+		username = RequestInput.getString("Could I get your name please? ");
 		return username;
 	}
 }
