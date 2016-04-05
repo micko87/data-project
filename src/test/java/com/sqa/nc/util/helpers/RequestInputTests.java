@@ -27,11 +27,8 @@ import org.junit.*;
 public class RequestInputTests {
 
 	static private String question;
-
 	static private Scanner scanner;
-
 	static private String username;
-
 	static private Object userValue;
 
 	@AfterClass
@@ -66,33 +63,33 @@ public class RequestInputTests {
 	@Ignore
 	public void testGetChar () {
 		question = "Please give me the best character: ";
-		userValue = RequestInputNC.getChar(question, 'a', 'n', 'c', 'z');
+		userValue = RequestInput.getChar(question, 'a', 'n', 'c', 'z');
 	}
 
 	@Test
 	@Ignore
 	public void testGetDouble () {
 		question = "Please give me your lucky DOUBLE: ";
-		userValue = RequestInputNC.getDouble(question);
+		userValue = RequestInput.getDouble(question);
 	}
 
 	@Test
 	@Ignore
 	public void testGetInt () {
 		question = "Please give me your lucky number: ";
-		userValue = RequestInputNC.getInt(question, 1, 2, 3, 4, 5, 6, 7, 8);
+		userValue = RequestInput.getInt(question, 1, 2, 3, 4, 5, 6, 7, 8);
 	}
 
 	@Test
 	@Ignore
 	public void testGetIntWithRange () {
 		question = "Please give me a number within my range: ";
-		userValue = RequestInputNC.getIntWithRange(question, 0, 10);
+		userValue = RequestInput.getIntWithRange(question, 0, 10);
 	}
 
 	@Test
 	public void testGetString () {
 		question = "Please give me your favorite color: ";
-		userValue = RequestInputNC.getString(question, "red", "white", "blue");
+		userValue = RequestInput.getString(question, "red", "white", "blue");
 	}
 }
