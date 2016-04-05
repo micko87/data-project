@@ -60,18 +60,41 @@ public class DisplayHelperTest {
 	public void testDisplay2DArray () {
 		System.out.println("display 2d array");
 		int[][] sudoku = new int[][] {
-				{ 0, 8, 0, 4, 0, 2, 0, 6, 0 },
-				{ 0, 3, 4, 0, 0, 0, 9, 1, 0 },
-				{ 9, 6, 0, 0, 0, 0, 0, 8, 4 },
-				{ 0, 0, 0, 2, 1, 6, 0, 0, 0 },
-				{ 2, 0, 0, 0, 0, 9, 6, 0, 0 },
-				{ 0, 1, 0, 3, 5, 7, 0, 0, 8 },
-				{ 8, 4, 0, 0, 0, 0, 0, 7, 5 },
-				{ 0, 2, 6, 0, 0, 0, 1, 3, 0 },
-				{ 0, 9, 0, 7, 0, 1, 0, 4, 0 }
+				{
+						0, 8, 0, 4, 0, 2, 0, 6, 0
+				},
+				{
+						0, 3, 4, 0, 0, 0, 9, 1, 0
+				},
+				{
+						9, 6, 0, 0, 0, 0, 0, 8, 4
+				},
+				{
+						0, 0, 0, 2, 1, 6, 0, 0, 0
+				},
+				{
+						2, 0, 0, 0, 0, 9, 6, 0, 0
+				},
+				{
+						0, 1, 0, 3, 5, 7, 0, 0, 8
+				},
+				{
+						8, 4, 0, 0, 0, 0, 0, 7, 5
+				},
+				{
+						0, 2, 6, 0, 0, 0, 1, 3, 0
+				},
+				{
+						0, 9, 0, 7, 0, 1, 0, 4, 0
+				}
 		};
-		int[][] numHolder = new int[][] { { 1
-			, 2, 3 }, { 1, 2, 3 } };
+		int[][] numHolder = new int[][] {
+				{
+						1, 2, 3
+				}, {
+						1, 2, 3
+				}
+		};
 		DisplayHelper.display2DArray(sudoku);
 	}
 
@@ -81,7 +104,9 @@ public class DisplayHelperTest {
 	 */
 	@Test
 	public void testDisplayArray () {
-		int[] arrayHolder = { 1, 2, 3, 8 };
+		int[] arrayHolder = {
+				1, 2, 3, 8
+		};
 		System.out.println("display ONE-D array");
 		DisplayHelper.displayArray(arrayHolder);
 	}

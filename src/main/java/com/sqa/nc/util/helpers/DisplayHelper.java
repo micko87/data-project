@@ -24,19 +24,19 @@ public class DisplayHelper {
 
 	// Method should display 2 dimensional array nicely formatted on screen
 	public static void display2DArray (int[][] matrix) {
-		for (int i = 0; i < matrix.length; i++) {
-			// System.out.println("\t" + matrix[i]);
-			System.out.println("");
-			for (int j = 0; j < matrix[0].length; j++) {
-				System.out.print("\t" + matrix[i][j]);
-			}
-		}
-		System.out.println("");
+//		System.out.println("using two for loops without first 1-D array method");
+//		for (int i = 0; i < matrix.length; i++) {
+//			// System.out.println("\t" + matrix[i]);
+//			for (int j = 0; j < matrix[0].length; j++) {
+//				System.out.print("\t" + matrix[i][j]);
+//			}
+//			System.out.println("");
+//		}
+//		System.out.println("----------------------------------------------");
 		// call other method
-		System.out.println("calling other method");
+//		System.out.println("calling first method");
 		for (int i = 0; i < matrix.length; i++) {
 			displayArray(matrix[i]);
-			System.out.println("");
 		}
 	}
 
