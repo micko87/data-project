@@ -7,7 +7,7 @@
  *   Created: Apr 13, 2016
  *
  */
-package com.sqa.nc.util.helpers;
+package com.sqa.nc.util.helpers.math;
 
 import java.util.*;
 

@@ -7,7 +7,7 @@
  *   Created: Apr 13, 2016
  *
  */
-package com.sqa.nc.util.helpers;
+package com.sqa.nc.util.helpers.math;
 
 import java.util.*;
 
@@ -15,6 +15,8 @@ import org.junit.*;
 import org.junit.runner.*;
 import org.junit.runners.*;
 import org.junit.runners.Parameterized.*;
+
+import com.sqa.nc.util.helpers.math.*;
 
 /**
  * MyMathTest //ADDD (description of class)
