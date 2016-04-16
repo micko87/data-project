@@ -326,6 +326,10 @@ public class RequestInput {
 				input = scanner.nextLine();
 				resultValue = input;
 				for (int i = 0; i < acceptableWords.length; i++) {
+					// System.out.println(resultValue.trim());
+					// only trim white space before/after string
+					// System.out.println(resultValue.trim().replace(" ", ""))
+					// eliminates all whitespace
 					if (resultValue.trim().replace(" ", "").equalsIgnoreCase(acceptableWords[i])) {
 						validWord = true;
 					}
