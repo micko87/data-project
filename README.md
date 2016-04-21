@@ -1,8 +1,8 @@
-#### BasicStructure
+#### Advanced Project
 
-### Date
+### 4/20/2016
 
-Basic structure for future projects
+Basic structure for future projects, for core working directory
 
 * Git
 * Java 7
