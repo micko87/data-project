@@ -4,7 +4,7 @@
   <artifactId>advanced-project</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>Advanced Project</name>
-  <description>An application which is basic structure for TestNG, feature branch.</description>
+  <description>An application which is basic structure for automation projects.</description>
    <dependencies>
   	<dependency>
 	<groupId>org.seleniumhq.selenium</groupId>
