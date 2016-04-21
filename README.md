@@ -2,7 +2,7 @@
 
 ### 4/20/2016
 
-Basic structure for future projects, for core working directory
+Basic structure for future java projects
 
 * Git
 * Java 7
