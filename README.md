@@ -1,6 +1,6 @@
-#### Advanced Project
+#### Data-project
 
-### 4/20/2016
+###  April 23, 2016
 
 Basic structure for future projects, for core working directory
 
